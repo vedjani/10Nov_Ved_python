@@ -1,0 +1,15 @@
+str="hy i am ved"
+
+print("capitalize : ",str.capitalize())
+print("casefold : ",str.casefold())
+print("upper case:", str.upper())
+print("lower case:", str.lower())
+print("title case:", str.title())
+print("replace 'ved' with 'vvv':", str.replace("ved", "vvv"))
+print("split by space : ", str.split( ))
+print('swapcase : ',str.swapcase())
+print('slice it after 2nd character : ',str[2:])
+print(str.center(40, "*"))
+print("ved is {0} at {1}".format("yooo","kem choo"))
+print("Is alpha:", "Hello".isalpha())
+print("Is digit:", "123".isdigit())

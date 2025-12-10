@@ -1,0 +1,9 @@
+def myint(nums):
+    i = 0
+    while i < len(nums):
+        yield nums[i]
+        i += 1     #increment 
+
+num = [1, 2, 3, 4, 5]
+for x in myint(num):
+    print(x)

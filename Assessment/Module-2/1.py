@@ -49,8 +49,7 @@ def generate_bill():
             print("Repair Fee    :", repair_fee)
             print("Tax (18%)     :", tax)
             print("Total Amount  :", total)
-            print("")
-
+            print("========================\n")
 
             break
         else:

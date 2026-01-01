@@ -1,10 +1,9 @@
-print("*****Welcome*****")
-
 orders=[]
 order_id = 1
 def add_order():
     global order_id
 
+    print("")
     name=(input("Enter customer name: "))
     device=(input("Enter device name: "))
     issue=(input("Enter issue date: "))
@@ -18,17 +17,18 @@ def add_order():
         "due":due
         
     }
-    orders.append(orders)
+    orders.append(order)
     print("order added")
-    print("order id :",order_id)
+    print("order id :",order_id,"\n")
     order_id = order_id + 1 
-    return order
+        
 
 
 def generate_bill():
-    ord_id=(input("Enter order id: "))
+    print("")
+    ord_id=int((input("Enter order id: ")))
     for i in orders:
-        if i[orders[order_id]] == ord_id:
+        if i["order_id"] == ord_id:
             parts_cost = int(input("Enter parts cost: "))
             repair_fee = int(input("Enter repair fee: "))
 
@@ -37,21 +37,20 @@ def generate_bill():
             total = subtotal + tax
 
             print("\n========= BILL =========")
-            print("Order ID      :",order["order_id"])
-            print("Customer Name :",order["name"])
-            print("Device Type   :",order["device"])
-            print("Issue         :",order["issue"])
-            print("Due Date      :",order["due"])
+            print("Order ID      :",i["order_id"])
+            print("Customer Name :",i["name"])
+            print("Device Type   :",i["device"])
+            print("Issue         :",i["issue"])
+            print("Due Date      :",i["due"])
             print("------------------------")
             print("Parts Cost    :", parts_cost)
             print("Repair Fee    :", repair_fee)
             print("Tax (18%)     :", tax)
             print("Total Amount  :", total)
             print("========================\n")
-
             break
-        else:
-            print("Order Id not found")
+    else:
+        print("Order Id not found")
 
 while True:
     print("=== FixTrack Menu ===")

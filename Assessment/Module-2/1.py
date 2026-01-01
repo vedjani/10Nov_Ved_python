@@ -1,3 +1,5 @@
+import qrcode
+import os
 orders=[]
 order_id = 1
 def add_order():
@@ -6,7 +8,7 @@ def add_order():
     print("")
     name=(input("Enter customer name: "))
     device=(input("Enter device name: "))
-    issue=(input("Enter issue date: "))
+    issue=(input("Enter issue : "))
     due=(input("Enter due date: "))
 
     order={
@@ -47,10 +49,13 @@ def generate_bill():
             print("Repair Fee    :", repair_fee)
             print("Tax (18%)     :", tax)
             print("Total Amount  :", total)
-            print("========================\n")
+            print("")
+
+
             break
-    else:
-        print("Order Id not found")
+        else:
+            print("Order Id not found")
+            break
 
 while True:
     print("=== FixTrack Menu ===")

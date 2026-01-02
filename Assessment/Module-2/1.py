@@ -1,5 +1,3 @@
-import qrcode
-import os
 orders=[]
 order_id = 1
 def add_order():

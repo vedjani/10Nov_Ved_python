@@ -48,11 +48,10 @@ def generate_bill():
             print("Tax (18%)     :", tax)
             print("Total Amount  :", total)
             print("========================\n")
-
             break
-        else:
-            print("Order Id not found")
-            break
+    else:
+        print("Order Id not found")
+            
 
 while True:
     print("=== FixTrack Menu ===")

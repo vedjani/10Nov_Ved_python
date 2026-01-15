@@ -1,0 +1,13 @@
+# Write a Python program to demonstrate handling multiple exceptions.
+try:
+    num1=int(input("enter 1 number:- "))
+    num2=int(input("enter 2 number:- "))
+
+    
+    print(f"output is = {num1/num2}")
+   
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+except ValueError:
+    print("Error! Invalid input.")

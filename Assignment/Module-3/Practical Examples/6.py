@@ -1,0 +1,6 @@
+# 6) Write a Python program to check the current position of the file cursor using file=open("4py.txt",'r')
+file=open("4py.txt",'r')
+fil_pr=file.read()
+print(f"file cursor position:-{file.tell()}")
+print(fil_pr)
+file.close()
